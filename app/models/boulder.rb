@@ -1,0 +1,3 @@
+class Boulder < ApplicationRecord
+  
+end
