@@ -16,7 +16,15 @@ RSpec.describe "#Boulders" do
 
         #Assert // Then
         expect(page).to have_content("Boulders")
-
+        expect(page).to have_content(resident_evil.name)
+        expect(page).to have_content("Grade: #{resident_evil.v_grade}")
+        expect(page).to have_content("Sent: #{resident_evil.tick}")
+        expect(page).to have_content(chips.name)
+        expect(page).to have_content("Grade: #{chips.v_grade}")
+        expect(page).to have_content("Sent: #{chips.tick}")
+        expect(page).to have_content(planet.name)
+        expect(page).to have_content("Grade: #{planet.v_grade}")
+        expect(page).to have_content("Sent: #{planet.tick}")
       end
     end
   end
