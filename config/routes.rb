@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "/fields/:id", to: "fields#show"
 
   get "/boulders", to: "boulders#index"
+  get "/boulders/:id", to: "boulders#show"
 end
