@@ -12,3 +12,9 @@ chips = new_joes.boulders.create(name: "Chips", v_grade: 6, tick: true)
 planet = new_joes.boulders.create(name: "Planet of the Apes", v_grade: 7, tick: true)
 ghost_king = new_joes.boulders.create(name: "Ghost King", v_grade: 11, tick: false)
 # Can copy and paste and use seeds for testing purposes 
+
+left_fork = Field.create(field_name: "Left Fork", in_season: true, total_ticks: 666)
+wills_afire = left_fork.boulders.create(name: "Wills Afire", v_grade: 6, tick: true)
+angler = left_fork.boulders.create(name: "The Angler", v_grade: 2, tick: true)
+kill_by_numbers = left_fork.boulders.create(name: "Kill by Numbers", v_grade: 5, tick: false)
+beyond_life = left_fork.boulders.create(name: "Beyond Life", v_grade: 10, tick: true)
