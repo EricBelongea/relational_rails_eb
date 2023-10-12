@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/fields", to: "fields#index"
   get "/fields/:id", to: "fields#show"
 
-
+  get "/boulders", to: "boulders#index"
 end
