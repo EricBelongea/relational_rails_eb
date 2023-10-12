@@ -1,0 +1,5 @@
+<h1>Welcome!</h1>
+
+<% @fields.each do |field| %>
+  <h3><a href="/fields/<%= field.id %>"><%= field.field_name%></a></h3>
+<% end %>
