@@ -1,4 +1,8 @@
 <h1><%= @field.field_name%></h1>
 <% @boulders.each do |boulder| %>
-<p><%= boulder.name %></p>
+<h3><%= boulder.name %></h3>
+<p>Grade: <%= boulder.v_grade %></p>
+<p>Sent: <%= boulder.tick %></p>
+<p>Created: <%= boulder.created_at %></p>
+<p>Updated: <%= boulder.updated_at %></p>
 <% end %>

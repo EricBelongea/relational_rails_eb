@@ -13,6 +13,11 @@ RSpec.describe "#Boulder Field" do
         visit "/fields/#{new_joes.id}/boulders"
 
         expect(page).to have_content(new_joes.field_name)
+        expect(page).to have_content(resident_evil.name)
+        expect(page).to have_content("Grade: #{resident_evil.v_grade}")
+        expect(page).to have_content("Sent: #{resident_evil.tick}")
+        expect(page).to have_content("Created: #{resident_evil.created_at}")
+        expect(page).to have_content("Updated: #{resident_evil.updated_at}")
       end
     end
   end
