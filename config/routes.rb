@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get "/boulders", to: "boulders#index"
   get "/boulders/:id", to: "boulders#show"
+
+  get "/fields/:id/boulders", to: "boulderfield#index"
 end
