@@ -1,6 +1,6 @@
 class FieldsController < ApplicationController
   def index
-    @fields = Field.all
+    @fields = Field.all.order(created_at: :asc)
   end
 
   def show

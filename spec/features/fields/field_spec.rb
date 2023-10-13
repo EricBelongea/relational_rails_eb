@@ -57,7 +57,7 @@ RSpec.describe "#Fields" do
       end
     end
 
-    xdescribe "When I visit a parent's show page" do
+    describe "When I visit a parent's show page" do
       it "I see a count of the number of children associated with this parent" do
         new_joes = Field.create(field_name: "New Joes", in_season: true, total_ticks: 101)
         resident_evil = new_joes.boulders.create(name: "Resident Evil", v_grade: 9, tick: true)
@@ -70,10 +70,14 @@ RSpec.describe "#Fields" do
         angler = left_fork.boulders.create(name: "The Angler", v_grade: 2, tick: true)
         kill_by_numbers = left_fork.boulders.create(name: "Kill by Numbers", v_grade: 5, tick: false)
         beyond_life = left_fork.boulders.create(name: "Beyond Life", v_grade: 10, tick: true)
-
+        jordan = left_fork.boulders.create(name: "They Call Him Jordan", v_grade: 10, tick: false)
         visit "/fields/#{new_joes.id}"
 
+        expect(page).to have_content("Total Boulders: 4")
 
+        visit "fields/#{left_fork.id}"
+
+        expect(page).to have_content("Total Boulders: 5")
       end
     end
   end
