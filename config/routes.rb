@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/fields", to: "fields#index"
+  get "/fields/new", to: "fields#new"
+  post "/fields", to: "fields#create"
   get "/fields/:id", to: "fields#show"
 
   get "/boulders", to: "boulders#index"
@@ -12,6 +14,4 @@ Rails.application.routes.draw do
 
   get "/fields/:id/boulders", to: "boulderfield#index"
 
-  get "/fields/new", to: "fields#new"
-  post "/fields", to: "fields#create"
 end

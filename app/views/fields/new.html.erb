@@ -1,13 +1,13 @@
 <form action="/fields" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Create a new Area:</p>
-  <label for="field_name">Field Name: </label><br/>
+  <h3>Create a new Area:</h3>
+  <label for="field_name">Field Name: </label>
   <input type='text' name='field[field_name]'><br/>
+  <label for="in_season">In Season:</label>
   <input type="radio" id="true" name="field[in_season]" value="true"><br/>
-  <label for="in_season">In Season </label><br/>
+  <label for="in_season">Out of Season:</label>
   <input type="radio" id="false" name="field[in_season]" value="false"><br/>
-  <label for="in_season">Out of Season</label><br/>
-  <label for="total_ticks">Number of Sends><br/>
+  <label for="total_ticks">Number of Sends:
   <input type="integer" name='task[total_ticks]'></input><br/>
   <input type='submit'/>
 </form>

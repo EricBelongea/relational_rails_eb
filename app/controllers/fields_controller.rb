@@ -13,9 +13,9 @@ class FieldsController < ApplicationController
 
   def create
     field = Field.new({
-      field_name: params[:fields][:field_name],
-      in_season: params[:fields][:in_season],
-      total_ticks: params[:fields][:total_ticks]
+      field_name: params[:field][:field_name],
+      in_season: params[:field][:in_season],
+      total_ticks: params[:field][:total_ticks]
     })
 
     field.save
