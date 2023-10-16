@@ -1,0 +1,14 @@
+<form action="/fields/:id/boulders" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <h3>Create a new Boulder:</h3>
+  <label for="name">Name: </label>
+  <input type='text' name='boulder[name]'><br/>
+  <label for="v_grade">Grade:</label>
+  <input type="integer" name="boulder[v_grade]"><br/>
+  <label for ="tick">Tick the climb:</label><br/>
+  <input type="radio" id="true" name="boulder[tick]" value="true">
+  <label for="tick">Yes</label><br/>
+  <input type="radio" id="false" name="boulder[tick]" value="false">
+  <label for="tick">No</label><br/>
+  <input type='submit'/>
+</form>
