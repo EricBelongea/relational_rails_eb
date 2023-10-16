@@ -9,6 +9,12 @@ class BoulderfieldController < ApplicationController
   end
 
   def create 
+    require 'pry'; binding.pry
+    # @fields = Field.find(
+    #   params[:id]
+    # )
+    
+    # field.boulders.create
     boulder = Boulder.new({
       name: params[:boulder][:name],
       v_grade: params[:boulder][:v_grade],
