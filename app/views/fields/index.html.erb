@@ -6,7 +6,8 @@
 <h1>Welcome!</h1>
 
 <% @fields.each do |field| %>
-  <h3><a href="/fields/<%= field.id %>"><%= field.field_name%></a></h3>
+  <h3><a href="/fields/<%= field.id %>"><%= field.field_name %></a></h3>
+  <p><a href="/fields/<%= field.id %>/edit">Edit Me</a></p>
   <p><%= field.created_at %></p>
 <% end %>
 

@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get "/fields/:id/boulders/new", to: "boulderfield#new"
   post "/fields/:id/boulders", to: "boulderfield#create"
 
-  get "fields/:id/edit", to: "fields#edit"
-  patch "fields/:id", to: "fields#update"
+  get "/fields/:id/edit", to: "fields#edit"
+  patch "/fields/:id", to: "fields#update"
 
   get "/fields/:id", to: "fields#show"
 
@@ -24,5 +24,5 @@ Rails.application.routes.draw do
   get "/boulders/:id/edit", to: "boulders#edit"
   patch "/boulders/:id", to: "boulders#update"
 
-
+  delete "/fields/:id", to: "fields#destroy"
 end

@@ -40,4 +40,9 @@ class FieldsController < ApplicationController
     redirect_to "/fields/#{field.id}"
   end
 
+  def destroy
+    Field.find(params[:id]).destroy
+
+    redirect_to "/fields"
+  end
 end

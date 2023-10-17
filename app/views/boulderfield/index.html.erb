@@ -11,6 +11,7 @@
 
 <% @boulders.each do |boulder| %>
 <h3><%= boulder.name %></h3>
+<p><a href="/boulders/<%= boulder.id %>/edit">Update Boulder</a></p>
 <p>Grade: <%= boulder.v_grade %></p>
 <p>Sent: <%= boulder.tick %></p>
 <p>Created: <%= boulder.created_at %></p>
