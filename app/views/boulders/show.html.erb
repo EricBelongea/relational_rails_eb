@@ -5,8 +5,10 @@
 
 <h1><%= @boulder.name %></h1>
 
+<p><a href="/boulders/<%= @boulder.id %>/edit">Update Boulder</a></p>
+
 <p>Grade: <%= @boulder.v_grade %></p>
 <p>Sent: <%= @boulder.tick %></p>
 <p>Field id: <%= @boulder.field_id %></p>
 <p>Created at: <%= @boulder.created_at %></p>
-<p>Updated at: <%= @boulder.updated_at%></p>
+<p>Updated at: <%= @boulder.updated_at %></p>

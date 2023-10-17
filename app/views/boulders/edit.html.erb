@@ -1,0 +1,15 @@
+<form action="/boulders/<%= @boulder.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h3>Update Boulder</h3>
+  <label for="name">Name: </label>
+  <input type='text' name=boulder[name] value="<%= @boulder.name %>"/><br/>
+  <label for="tick"> Sent? </label><br/>
+  <label for="tick">True:</label>
+  <input  type="radio" id="true" name="boulder[tick]" value="true"><br/>
+  <label for="tick">False:</label>
+  <input  type="radio" id="false" name="boulder[tick]" value="false"><br/>
+  <label for="v_grade">Grade: </label>
+  <input type='integer' name="boulder[v_grade]"value="<%= @boulder.v_grade %>"/><br/>
+  <input type='submit'/>
+</form>

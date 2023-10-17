@@ -21,5 +21,8 @@ Rails.application.routes.draw do
   get "/boulders", to: "boulders#index"
   get "/boulders/:id", to: "boulders#show"
 
+  get "/boulders/:id/edit", to: "boulders#edit"
+  patch "/boulders/:id", to: "boulders#update"
+
 
 end
