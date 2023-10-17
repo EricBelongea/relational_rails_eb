@@ -1,4 +1,4 @@
-<form action="/fields/:id/boulders" method="post">
+<form action="/fields/<%= @field.id %>/boulders" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <h3>Create a new Boulder:</h3>
   <label for="name">Name: </label>

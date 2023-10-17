@@ -5,6 +5,8 @@
 
 <h1><%= @field.field_name%></h1>
 
+<p><a href="/fields/<%= @field.id %>/boulders/new">Add Boulder</a></p>
+
 <% @boulders.each do |boulder| %>
 <h3><%= boulder.name %></h3>
 <p>Grade: <%= boulder.v_grade %></p>

@@ -5,24 +5,18 @@ class BoulderfieldController < ApplicationController
   end
 
   def new
-
+    @field = Field.find(params[:id])
   end
 
   def create 
-    require 'pry'; binding.pry
-    # @fields = Field.find(
-    #   params[:id]
-    # )
+    @field = Field.find(params[:id])
     
-    # field.boulders.create
-    boulder = Boulder.new({
+    @field.boulders.create({
       name: params[:boulder][:name],
       v_grade: params[:boulder][:v_grade],
       tick: params[:boulder][:tick]
     })
 
-    boulder.save
-
-    redirect_to "/fields/:id/boulders"
+    redirect_to "/fields/#{@field.id}/boulders"
   end
 end

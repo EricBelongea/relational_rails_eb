@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   post "/fields", to: "fields#create"
 
   get "/fields/:id/boulders", to: "boulderfield#index"
-  get "fields/:id/boulders/new", to: "boulderfield#new"
-  post "fields/:id/boulders", to: "boudlerfield#create"
+  get "/fields/:id/boulders/new", to: "boulderfield#new"
+  post "/fields/:id/boulders", to: "boulderfield#create"
 
   get "fields/:id/edit", to: "fields#edit"
   patch "fields/:id", to: "fields#update"
