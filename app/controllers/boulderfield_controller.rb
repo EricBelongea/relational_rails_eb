@@ -2,6 +2,8 @@ class BoulderfieldController < ApplicationController
   def index 
     @field = Field.find(params[:id])
     @boulders = @field.boulders
+
+    @boulders = @boulders.order(params[:sort_by])
   end
 
   def new

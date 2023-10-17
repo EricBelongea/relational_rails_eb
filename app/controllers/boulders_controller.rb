@@ -1,6 +1,6 @@
 class BouldersController < ApplicationController
   def index
-    @boulders = Boulder.all
+    @boulders = Boulder.all.where(tick: true)
   end
 
   def show

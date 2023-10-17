@@ -7,6 +7,8 @@
 
 <p><a href="/fields/<%= @field.id %>/boulders/new">Add Boulder</a></p>
 
+<%= link_to "Sort Boulders", :sort_by => "name" %>
+
 <% @boulders.each do |boulder| %>
 <h3><%= boulder.name %></h3>
 <p>Grade: <%= boulder.v_grade %></p>
