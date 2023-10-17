@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get "fields/:id/boulders/new", to: "boulderfield#new"
   post "fields/:id/boulders", to: "boudlerfield#create"
 
+  get "fields/:id/edit", to: "fields#edit"
+  patch "fields/:id", to: "fields#update"
+
   get "/fields/:id", to: "fields#show"
 
   get "/boulders", to: "boulders#index"

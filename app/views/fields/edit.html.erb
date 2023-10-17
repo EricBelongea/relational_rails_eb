@@ -1,0 +1,12 @@
+<form action="/fields/<%= @field.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit</p>
+  <input type='text' name='field[field_name]' value="<%= @field.field_name %>"/><br/>
+  <label for="in_season">In Season:</label>
+  <input  type="radio" id="true" name='field[in_season]' value="true"><%= @field.in_season %><br/>
+  <label for="in_season">Out of Season:</label>
+  <input  type="radio" id="false" name='field[in_season]' value="false"><%= @field.in_season %><br/>
+  <input type='integer' name='field[total_ticks]' value="<%= @field.total_ticks %>"/><br/>
+  <input type='submit'/>
+</form>
